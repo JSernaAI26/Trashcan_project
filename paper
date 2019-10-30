@@ -1,0 +1,36 @@
+import random
+
+class Paper: 
+  def __init__(self):
+    self.color = "white"
+    self.size = 1
+    self.crumbled = False
+  def morph(self): 
+    if random.randint(0,1) == 0:
+      self.crumbled = False
+    else:
+      self.crumbled = True
+  def checkSize(self):
+    if self.crumbled == True:
+      self.size = 3
+    else: 
+      self.size = 1
+
+my_paper = Paper()    #Calls class and creates an object
+bronson_paper = Paper(); 
+bronson_paper.color = "black" 
+my_paper.morph()      #Calls function in a class to modify an                           aspect of that class
+my_paper.checkSize()  #Calls function in a class to modify an                           aspect of that class
+#my_paper.size = 2    #Test Code, can define a object value in                          main     
+
+print("My paper is " + str(my_paper.color) + " with a size of " + str(my_paper.size) + " and is ")
+if my_paper.crumbled == False:
+  print("not crumbled")
+else: 
+  print("crumbled")
+
+print("Bronson's paper is " + str(bronson_paper.color) + " with a size of " + str(bronson_paper.size) + " and is ")
+if bronson_paper.crumbled == False:
+  print("not crumbled")
+else: 
+  print("crumbled")
