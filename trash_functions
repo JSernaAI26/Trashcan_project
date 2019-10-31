@@ -1,0 +1,42 @@
+import random
+
+class Paper: 
+  def __init__(self):
+    self.color = "white"
+    self.size = 1
+    self.crumbled = False
+  def morph(self): 
+    if random.randint(0,1) == 0:
+      self.crumbled = False
+    else:
+      self.crumbled = True
+  def checkSize(self):
+    if self.crumbled == True:
+      self.size = 3
+    else: 
+      self.size = 1
+
+#class student needs to be update and completed
+
+class student:
+  def __init__ (self):
+    self.name = random.randint(1,4)
+    
+
+class trashcan:
+  def __init__ (self):
+    self.style = random.randint(1,4)
+    def canSize(self):
+      if self.style == 1:
+        self.size = 10
+      elif self.style == 2:
+        self.size = 20
+      elif self.style == 3:
+        self.size = 50
+      else:
+        self.size = 100
+      return self.size
+    self.size = canSize(self)
+
+winn_trashcan = trashcan(); 
+print(winn_trashcan.size)
